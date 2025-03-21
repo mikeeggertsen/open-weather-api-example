@@ -1,3 +1,36 @@
-# Ignore artifacts:
+# Ignore node_modules and build outputs
+node_modules
+dist
 build
+.out
+.next
 coverage
+
+# Ignore environment and configuration files
+.env
+*.log
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore assets and compiled files
+public
+static
+*.min.js
+*.min.css
+
+# Ignore specific file types
+*.snap
+*.lock
+*.md
+*.toml
+*.yml
+*.yaml
+
+# Ignore IDE/editor-specific files
+.vscode
+.idea
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
