@@ -3,7 +3,7 @@ on: push
 
 env: 
   OPEN_WEATHER_API_URL=${{ vars.OPEN_WEATHER_API_URL }}
-  OPEN_WEATHER_API_KEY=${{ secrets.OPEN_WEATHER_API_URL }}
+  OPEN_WEATHER_API_KEY=${{ secrets.OPEN_WEATHER_API_KEY }}
   PORT=${{ vars.PORT }}
 
 jobs:
