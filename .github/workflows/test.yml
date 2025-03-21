@@ -6,9 +6,9 @@ jobs:
     runs-on: ubuntu-latest
 
     env: 
-      OPEN_WEATHER_API_URL=${{ vars.OPEN_WEATHER_API_URL }}
-      OPEN_WEATHER_API_KEY=${{ secrets.OPEN_WEATHER_API_KEY }}
-      PORT=${{ vars.PORT }}
+      OPEN_WEATHER_API_URL: ${{ vars.OPEN_WEATHER_API_URL }}
+      OPEN_WEATHER_API_KEY: ${{ secrets.OPEN_WEATHER_API_KEY }}
+      PORT: ${{ vars.PORT }}
 
     steps:
       - name: ⬇️ Checkout repo
