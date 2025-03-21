@@ -1,0 +1,30 @@
+name: Code Check
+on: push
+
+jobs:
+  lint:
+    name: ⬣ ESLint, ʦ TypeScript, and 💅 Prettier
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🤌 Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+
+      - name: 📥 Download deps
+        run: pnpm install --frozen-lockfile
+
+      - name: 🔬 Lint
+        run: pnpm run lint:strict
+
+      - name: 🔎 Type check
+        run: pnpm run typecheck
+
+      - name: 💅 Prettier check
+        run: pnpm run format:check
