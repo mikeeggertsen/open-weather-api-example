@@ -1,6 +1,11 @@
 name: Tests
 on: push
 
+env: 
+  OPEN_WEATHER_API_URL=${{ vars.OPEN_WEATHER_API_URL }}
+  OPEN_WEATHER_API_KEY=${{ secrets.OPEN_WEATHER_API_URL }}
+  PORT=${{ vars.PORT }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
