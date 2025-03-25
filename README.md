@@ -21,24 +21,22 @@ Example Request: `GET /weather/summary?unit=celsius&temperature=5&cities=2618425
 Example Response:
 
 ```json
-{
-  "cities": [
-    {
-      "id": 2618425,
-      "name": "Copenhagen",
-      "coord": {
-        "lat": 55.6759,
-        "lon": 12.5655
-      },
-      "country": "DK",
-      "population": 0,
-      "timezone": 3600,
-      "sunrise": 1742533756,
-      "sunset": 1742577869
+[
+  {
+    "id": 2618425,
+    "name": "Copenhagen",
+    "coord": {
+      "lat": 55.6759,
+      "lon": 12.5655
     },
-    ...
-  ]
-}
+    "country": "DK",
+    "population": 0,
+    "timezone": 3600,
+    "sunrise": 1742533756,
+    "sunset": 1742577869
+  },
+  ...
+]
 ```
 
 ### `GET /weather/cities/<city_id>`
@@ -149,6 +147,15 @@ The application includes basic error handling for:
 
 The solution includes tests for API endpoints using Jest. To run the tests:
 `pnpm run test`
+
+### Github Actions Workflows
+
+To make the test workflow work, you need to add the environment variables to the repository secrects & variables.
+
+1. Go to `Settings`
+2. Then go to `Secrets and Variables` under `Security`
+3. Then click the `Actions` menu item.
+4. Finally add the `OPEN_WEATHER_API_KEY` to your `Secrets` and add the rest under `Variables`
 
 ### Future Improvements
 
